@@ -1,8 +1,8 @@
 const videos = [
-    { element: document.getElementById('video1'), src: '/static/video1.mp4' },
-    { element: document.getElementById('video2'), src: '/static/video2.mp4' },
-    { element: document.getElementById('video3'), src: '/static/video3.mp4' }
+    { element: document.getElementById('video1'), src: 'https://videos.pexels.com/video-files/13221290/13221290-uhd_2560_1440_30fps.mp4' },
+    { element: document.getElementById('video2'), src: 'https://videos.pexels.com/video-files/28552794/12418740_2560_1440_60fps.mp4' },
 ];
+
 
 let currentVideo = 0;
 
