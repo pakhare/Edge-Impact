@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Impact</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="parent">
+        <nav>
+            <a id="logo" href="{{ url_for('home') }}">edge<span style="color: rgb(0, 161, 89); font-weight: 800;">impact</span></a>
+            <img style="width: 30px; margin-left: 10px;" src="/static/icon.png">
+            <a id="link" href="{{ url_for('dashboard') }}">Dashboard</a>
+        </nav>
+        <main>
+        <div class="card2">
+            <p><b>Important: </b>Start <a href="https://colab.research.google.com/drive/1I1c1wKx5OACMMjmmtqdg41-20cPjiF-6?usp=sharing" target="_blank">this</a> notebook to simulate Edge Device for Offline processing. Takes about 2 minutes, then click Start Simulation.</p>
+            Select Location:
+            <select id="location" required>
+                <option value="" disabled selected>Select a Location</option>
+                <option value="Turkana, Kenya">Turkana, Kenya</option>
+                <option value="Dhaka, Bangladesh">Dhaka, Bangladesh</option>
+                <option value="Udaipur, India">Udaipur, India</option>
+                <option value="Sindhupalchok, Nepal">Sindhupalchok, Nepal</option>
+                <option value="Chad">Chad</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+            </select>
+            <button class="strt" id="startButton" onclick="startSimulation()">Start Simulation</button>
+            <button class="stop" id="stopButton" onclick="stopSimulation()">Stop Simulation</button>
+            <p id="tltp" style="color: red;"></p>
+            
+        </div>
+        <br><br>
+        <div class="card-co">
+            <div class="card">
+                <h3>Network Stats</h3><hr><br>
+                <div style="display: flex; gap:100px;">
+                    <div style="display: flex; justify-content: center; flex-direction: column;">
+                        <p id="traffic" style="font-size: 60px; margin-right: 0;">0<span style="font-size: small; margin-left: 2px;">Mbps</span></p><div>Traffic</div>
+                    </div>
+                    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                        <p id="users" style="font-size: 60px;">0</p><div>Users</div>
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 30px;">
+                    <div>
+                        <p id="latency" style="font-size: 60px;">0<span style="font-size: small; margin-left: 2px;">ms</span></p><div>Latency</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Edge Device Processing</h3><hr><br>
+                <span id="spn">Click Start Simulation</span>
+                <div id="powerrusage" style="display: none;">
+                    <img style="width: 80px;" src="https://cdn.pixabay.com/animation/2023/11/09/03/05/03-05-45-320_512.gif">
+                    <p>Predicting Power Usage ...</p>
+                </div><hr>
+                <div id="watsonx">
+                    <p id="ggt" style="font-size: medium;"></p><br>
+                    Using <b>watsonx ai</b> for predicting Power Source 
+                </div>
+                <div></div>
+            </div>
+            <div class="card">
+                <h3>Base Station Adjustments</h3><hr><br>
+                <div>
+                <div>
+                    <p id="powerpercent">80 %</p>
+                    <p>Power Capacity</p>
+                </div>
+                <div>
+                    
+                    <div id="sourcepercent">
+                        <div style="display: flex; flex-direction: column;">
+                        <p id="traditionalpercent">100%</p>
+                        <p>Grid</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                        <p id="solarpercent">100%</p>
+                        <p>Solar</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                        <p id="windpercent">54%</p>
+                        <p>Wind</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                        <p id="hydropercent">44%</p>
+                        <p>Hydro</p>
+                        </div>
+                    </div>
+                    <p>Power Source</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-image: url("https://videos.pexels.com/video-files/5020034/5020034-uhd_2560_1440_30fps.mp4");
+}
+
+
+
+.myVideo {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+}
+
+  .parent {
+    /* margin: 0px 60px 10px 60px; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 100px 20px 100px;
+    background-color: rgba(255, 255, 255, 0.689);
+    border-bottom: solid 1px lightgray;
+}
+
+#logo {
+    color: rgb(48, 64, 104);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#link {
+    color: rgb(48, 64, 104);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+main {
+    align-self: center;
+    align-content: center;
+    height: 100%;
+}
+
+#getSt {
+    text-decoration: none;
+    color: rgb(0, 161, 89);
+    font-weight: 600;
+    font-size: larger;
+    border: solid 1px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.749);
+    transition: ease 0.4s;
+}
+
+#getSt:hover {
+    color: white;
+    background-color: rgba(0, 161, 88, 0.736);
+}
+
+.card-co {
+    display: flex;
+    gap: 50px;
+}
+
+.card {
+    background-color: rgba(229, 229, 229, 0.632);
+    padding: 30px;
+    font-weight: 300;
+    width: 300px;
+}
+
+.card2 {
+    background-color: rgba(229, 229, 229, 0.632);
+    padding: 30px;
+    font-weight: 300;
+}
+
+.card2 a {
+    font-weight: 600;
+    text-decoration: underline;
+    transition: ease 0.3s;
+}
+
+.card2 a:hover {
+    text-decoration: none;
+}
+
+.card h3 {
+    font-weight: 500;
+}
+
+.card p {
+    font-size: xx-large;
+    margin: 9px;
+}
+
+.strt {
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(65, 112, 239, 0.919);
+    color: white;
+    border: none;
+    font-size: medium;
+}
+
+.stop {
+    margin-left: 9px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(140, 140, 140, 0.751);
+    color: white;
+    border: none;
+    font-size: medium;
+}
+
+.strt:hover, .stop:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#sourcepercent {
+    margin-top: 40px;;
+    display: flex;
+    gap: 13px;
+}
+
+#sourcepercent p{
+    font-size: larger;
+}
+
+#sourcepercent div p:nth-of-type(2) {
+    font-weight: 400;
+}
+
+#location {
+    padding: 11px;
+    border: none;
+    margin-right: 9px;
+}
